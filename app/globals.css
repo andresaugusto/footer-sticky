@@ -2,20 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@font-face {
+  font-family: 'Serif';
+  src: url('./fonts/PPNeueWorld-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Sans';
+  src: url('./fonts/PPNeueMontreal-Regular.ttf');
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+p{
+  font-family: 'Sans';
+}
+
+h1, h2{
+  font-family: 'Serif';
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }
